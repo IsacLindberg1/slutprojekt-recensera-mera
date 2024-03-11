@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/*Färger: 
+turkos: #97F9F9
+gråblå: #C1E0F7
+råsa: #C59FC9
+*/
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+.App {
+  text-align: center;
+  font-family: "PT Serif";
+  background-color: #C1E0F7;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-column-gap: 50px;
+}
+.App nav {
+  background-color: #C59FC9;
+  border: 3px solid black;
+}
+.App nav ul {
+  display: grid;
+  grid-template-rows: auto;
+}
+.App nav ul li {
+  background-color: #C59FC9;
+  list-style: none;
+}
+.App nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 2.5em;
+  transition: color 0.4s;
+}
+.App nav ul li a:hover {
+  color: black;
+}
+.App nav ul li #logo {
+  height: 190px;
+  cursor: pointer;
+}
+.App .loginLi {
+  list-style: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.App .loginLi a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  border-radius: 7.5px 7.5px;
+  padding: 7px;
+}
+.App .gridContainer article {
+  border: 3px solid black;
+  border-radius: 10px 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  grid-column: auto;
+  padding: 10px;
+  margin: 50px;
+  background-color: #C59FC9;
+}
+.App .gridContainer article p:first-child {
+  font-size: 1.5em;
+  font-family: "Anton";
+}
+.App .gridContainer article p:nth-of-type(2) {
+  font-size: 1.2em;
+}
+.App .gridContainer article p:nth-of-type(3) {
+  font-size: 1.2em;
+}
+.App .gridContainer article .commentsContainer ul:nth-child(2) {
+  border: 2px solid black;
+  border-radius: 7.5px 7.5px;
+  padding: 15px;
+  list-style-type: none;
+  text-align: left;
+}
+.App .gridContainer article .commentsContainer ul:nth-child(2) li {
+  margin: 5px;
+  list-style: none;
+}
+.App button {
+  background-color: white;
+  border-radius: 4px 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.4s;
+}
+.App img {
+  width: 75%;
+}
+.App button:hover {
+  background-color: #C1E0F7;
+}
+.App form {
+  font-size: 1.5em;
+  margin: 5vw;
+}
+.App form input {
+  height: 25px;
+}
+.App form textarea {
+  width: 100%;
+  height: 175px;
+}
+.App form .choseCategories {
+  display: grid;
+  grid-template-columns: auto;
+}
+.App form .choseCategories input {
+  grid-area: 1;
+}
+.App form .choseCategories label {
+  grid-area: 1;
+}
+.App form button {
+  height: 30px;
+}
+.App .categoriesUl {
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 7.5px 7.5px;
+  padding: 10px;
+}
+.App .categoriesUl li {
+  text-align: center;
+  list-style: none;
+  font-weight: normal;
+}
+.App .registerForm {
+  border: 3px solid black;
+  border-radius: 7.5px 7.5px;
+  padding: 20px;
+}
+.App footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+@media only screen and (min-width: 1024px) {
+  .App nav ul {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+  }
+  .App .reviewContainer ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .App .categoriesUl {
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 7.5px 7.5px;
+    padding: 10px;
+  }
+  .App .categoriesUl li {
+    text-align: left;
+    list-style: disc;
+    font-weight: normal;
+  }
+  .App .commentsContainer ul {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}/*# sourceMappingURL=App.css.map */

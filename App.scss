@@ -1,0 +1,196 @@
+/*Färger: 
+turkos: #97F9F9
+gråblå: #C1E0F7
+råsa: #C59FC9
+*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.App {
+  text-align: center;
+  font-family: "PT Serif";
+  background-color: #C1E0F7;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-column-gap: 50px;
+
+  nav {
+        background-color: #C59FC9;
+        border: 3px solid black;
+        ul {
+            display: grid;
+            grid-template-rows: auto;   
+            li {
+                background-color: #C59FC9;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 2.5em;
+                    transition: color 0.4s;
+                }
+                a:hover {
+                  color: black;
+                }
+                list-style: none;
+                #logo {
+                    height: 190px;
+                    cursor: pointer;
+                }
+            }  
+        }
+  }
+
+  .loginLi{
+    list-style: none;
+    font-size: 1.5em;
+    cursor: pointer;
+
+    a{
+      text-decoration: none;
+      color: black;
+      border: 2px solid black;
+      border-radius: 7.5px 7.5px;;
+      padding: 7px;
+    }
+  }
+
+  .gridContainer{
+    article{
+      border: 3px solid black;
+      border-radius: 10px 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      grid-column: auto;
+      padding: 10px;
+      margin: 50px;
+      background-color: #C59FC9;
+
+      p:first-child{
+        font-size: 1.5em;
+        font-family: "Anton";
+      }
+      p:nth-of-type(2){
+        font-size: 1.2em;
+      } 
+      p:nth-of-type(3){
+        font-size: 1.2em;
+      } 
+      .commentsContainer{
+        ul:nth-child(2){
+          border: 2px solid black;
+          border-radius: 7.5px 7.5px;
+          padding: 15px;
+          list-style-type: none;
+          text-align: left;
+          li{
+            margin: 5px;
+            list-style: none;
+          }
+        }
+      }
+    }
+  }
+
+  button{
+    background-color: white;
+    border-radius: 4px 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.4s;
+  }
+  img{
+    width: 75%;
+  }
+  button:hover {
+    background-color:  #C1E0F7;
+  }
+
+  form{
+    font-size: 1.5em;
+    margin: 5vw;
+
+    input{
+      height: 25px;
+    }
+
+    textarea{
+      width: 100%;
+      height: 175px;
+    }
+
+    .choseCategories{
+      display: grid;
+      grid-template-columns: auto;
+      input{
+        grid-area: 1;
+      }
+      label{
+        grid-area: 1;
+      }
+    }
+
+    button{
+      height: 30px;
+    }
+  }
+
+  .categoriesUl{
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 7.5px 7.5px;
+    padding: 10px;
+    li{
+      text-align: center;
+      list-style: none;
+      font-weight: normal;
+    }
+  }
+
+  .registerForm{
+    border: 3px solid black;
+    border-radius: 7.5px 7.5px;
+    padding: 20px;
+  }
+  
+  footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;  
+  }
+
+    @media only screen and (min-width: 1024px){
+      nav{
+        ul{
+          grid-template-columns: repeat(4, 1fr);
+          padding: 0;
+        }
+      }
+      .reviewContainer{
+        ul {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .categoriesUl{
+      font-weight: bold;
+      border: 2px solid black;
+      border-radius: 7.5px 7.5px;
+      padding: 10px;
+      li{
+        text-align: left;
+        list-style: disc;
+        font-weight: normal;
+      }
+    }
+    .commentsContainer{
+      ul{
+        display: grid;
+        grid-template-columns: auto;
+      }
+      
+    }
+  }
+}
