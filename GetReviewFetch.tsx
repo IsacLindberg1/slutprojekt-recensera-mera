@@ -50,17 +50,17 @@ export default function GetReviewFetch() {
         <div className="reviewContainer">
             {isLoading && <div>Laddar...</div>}
             <h2>Recensioner</h2>
-            <ul>
+            <div>
                 {reviews.map((review, index) => (
                     <div className="gridContainer" key={index}>
                         <article>
                             <p>{review.title}</p>
                             <p>Skribent: {review.username}</p>
-                            <ul className="categoriesUl">Kategorier:
+                            <div className="categoriesUl">Kategorier:
                                 {review.categories.map((category, index) => (
-                                    <li key={index}>{category.category}</li>
+                                    <p key={index}>{category.category}</p>
                                 ))}
-                            </ul>
+                            </div>
                             <p>{review.content}</p>
                             <img src={"./pictures/" + review.imgUrl + ".png"} alt="" /><br />
                             <a type="submit">👍 {review.likeCount + " "}</a>
@@ -72,7 +72,7 @@ export default function GetReviewFetch() {
                         </article>
                     </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
