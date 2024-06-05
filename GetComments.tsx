@@ -40,14 +40,14 @@ export default function GetComments() {
     return (
         <div className="commentsContainer">
             {isLoading && <div>Laddar kommentarer...</div>}
-            <ul>
+            <div>
                 {comments.map((comment, index) => (
                     <React.Fragment key={index}>
-                        <li>{comment.username}</li>
-                        <li>{comment.comment}</li>
+                        <p>{comment.username}</p>
+                        <p>{comment.comment}</p>
                     </React.Fragment>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
